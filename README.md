@@ -62,7 +62,7 @@ For example, for the two texts above, a part of the inverted index is represente
 
     On the left side there is the key (every word), while on the right side there is a list of document IDs, as well as how many times each word appears in each document. This list is called a *postings list*. For example, the word *"lazy"* appears twice in document 0 ( thus [ 0, 2 ] ) and once in document 1.
 
-- **[Trie](https://en.wikipedia.org/wiki/Trie)** is used in order to efficiently find the *postings lists* and thus achieve fast searches in the index. It stores the documents' words. In its
+- A **[Trie](https://en.wikipedia.org/wiki/Trie)** is used in order to efficiently find the *postings lists* and thus achieve fast searches in the index. It stores the documents' words. In its
 leaves each posting list is included. For example, in the following figure, a part of the Trie and postings lists is depicted.
 
 ![Trie](img/trie.png "Trie")
