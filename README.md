@@ -34,6 +34,9 @@ Each line of this file is a document with words. For example, if the contents of
 1 Quick brown foxes leaped over lazy dogs for fun
 ```
 It means that there are two documents, one for each line. The first word in each line is the ID of the specific document. 
+
+There are some demo datasets provided (in the [datasets folder](./datasets)), as well as some queries (in the [queries folder](./queries)) for them and their corresponding results (in the [results folder](./results)).
+
 > The document IDs must be given in order (starting from 0). An appropriate check is performed and in the case that an error is found the application is terminated.
 
 
@@ -61,7 +64,7 @@ For example, for the two texts above, a part of the inverted index is represente
     | ...   | ...           |
 
     On the left side there is the key (every word), while on the right side there is a list of document IDs, as well as how many times each word appears in each document. This list is called a *postings list*. For example, the word *"lazy"* appears twice in document 0 ( thus [ 0, 2 ] ) and once in document 1.   
-    
+
 - A [**Trie**](https://en.wikipedia.org/wiki/Trie) is used in order to efficiently find the *postings lists* and thus achieve fast searches in the index. It stores the documents' words. In its
 leaves each posting list is included. For example, in the following figure, a part of the Trie and postings lists is depicted.
 
